@@ -27,18 +27,3 @@ author_profile: true
 {% endfor %}
 
 
-# book chapters
-
-{% for work in site.data.books %}
-  <div id="container">
-    <div id="left">
-        <b>{{ forloop.rindex }}.</b>
-        <quotations>❝</quotations>{{ work.title }}<quotations>❞</quotations><br>
-        {{ work.authors }}.<br>
-        ({{ work.date }}) <a href="{{ work.url }}">DOI</a>. {{ work.other }}
-        <br>
-    </div>
-    <div class="clear"></div>
-  </div>
-  <hr>
-{% endfor %}
