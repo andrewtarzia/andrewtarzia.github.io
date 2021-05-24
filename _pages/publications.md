@@ -1,11 +1,11 @@
 ---
 layout: archive
-title: "Publications"
+title: 
 permalink: /publications/
 author_profile: true
 ---
 
-# publications
+# journal articles
 
 {% for work in site.data.publications %}
   <div id="container">
