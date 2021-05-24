@@ -1,6 +1,5 @@
 ---
 layout: archive
-title: 
 permalink: /publications/
 author_profile: true
 ---
@@ -9,12 +8,7 @@ author_profile: true
 
 {% for work in site.data.publications %}
   <div id="container">
- <div id="left">
-        <center> 
-            <img style="width:150px;" src="{{ work.image }}">
-        </center>
-    </div>
-    <div id="right">
+    <div id="left">
         <b>{{ forloop.rindex }}.</b>
         <quotations>❝</quotations>{{ work.title }}<quotations>❞</quotations><br>
         {{ work.authors }}.<br>
