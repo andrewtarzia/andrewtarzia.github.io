@@ -14,7 +14,7 @@ Additionaly software packages I develop that work in tandem with <i>stk</i>:
 * [MCHammer](https://github.com/andrewtarzia/MCHammer) : Efficient MC-based optimisation of chemical structures based on alchemical bond and nonbonded potential functions (implemented into <i>stk</i> as an Optimizer class)
 * [SpinDry](https://github.com/andrewtarzia/SpinDry) : Efficient MC-based host-guest conformer generation of <i>stk</i> molecules based on alchemical potential functions
 
-I also have some examples of <i>stk<\i> usage [here](https://github.com/andrewtarzia/stk-examples).
+I also have some examples of <i>stk</i> usage [here](https://github.com/andrewtarzia/stk-examples).
 
 
 # calculating molecular size
