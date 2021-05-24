@@ -31,16 +31,11 @@ author_profile: true
 
 {% for work in site.data.books %}
   <div id="container">
- <div id="left">
-        <center> 
-            <img style="width:150px;" src="{{ work.image }}">
-        </center>
-    </div>
-    <div id="right">
+    <div id="left">
         <b>{{ forloop.rindex }}.</b>
-        <quotations>❝</quotations>{{ work.title }}<quotations>❞</quotations><br>
+        <quotations>❝</quotations>{{ work.title }}<quotations>❞</quotations> in <quotations>❞</quotations>{{ work.booktitle }}<quotations>❞</quotations><br>
         {{ work.authors }}.<br>
-        <i>{{ work.journal }}</i>. ({{ work.date }}) <a href="{{ work.url }}">DOI</a>. {{ work.other }}
+        <i>Chapter:</i>{{ work.chapter }}. ({{ work.date }}) <a href="{{ work.url }}">DOI</a>. {{ work.other }}
         <br>
     </div>
     <div class="clear"></div>
