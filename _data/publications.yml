@@ -1,30 +1,79 @@
-Unsymm paper, \textit{under review}.
+- title: High-throughput Computational Evaluation of Low Symmetry Pd2L4 Cages to Aid in System Design
+  authors: A. Tarzia, J. E. M. Lewis, and K. E. Jelfs
+  journal: ChemRxiv 
+  date: 2021
+  url: https://doi.org/10.26434/chemrxiv.14604294.v1
+  other: under review
 
-stk paper, \textit{accepted}.
+- title: stk: An Extendable Python Framework for Automated Molecular and Supramolecular Structure Assembly and Discover
+  authors: L. Turcani, A. Tarzia, F. Szczypiński, and K. E. Jelfs
+  journal: ChemRxiv 
+  date: 2021
+  url: https://doi.org/10.26434/chemrxiv.14179022.v2
+  other: accepted
 
+- title: N-Aryl–linked Spirocyclic Polymers for Membrane Separations of Complex Hydrocarbon Mixtures
+  authors: K. A. Thompson, R. Mathias, D. Kim, J. Kim, N. Rangnekar, J. R. Johnson, S. J. Hoy, I. Bechis, A. Tarzia, K. E. Jelfs, B. A. McCool, A. G. Livingston, R. P. Lively, and M. G. Finn
+  journal: Science 
+  date: 2020
+  url: https://science.sciencemag.org/content/369/6501/310.abstract
 
-K.~A. Thompson, R. Mathias, D. Kim, J. Kim, N. Rangnekar, J.~R. Johnson, S.~J. Hoy, I. Bechis, \textbf{A. Tarzia}, K.~E. Jelfs, B.~A. McCool, A.~G. Livingston, R.~P. Lively, M.~G. Finn, "\textit{N}-Aryl–linked Spirocyclic Polymers for Membrane Separations of Complex Hydrocarbon Mixtures", \textit{Science}, 310--315 (2020).
+- title: Conformational Control of Pd2L4 Assemblies with Unsymmetrical Ligands
+  authors: J. E. M. Lewis, A. Tarzia, A. J. P. White, and K. E. Jelfs
+  journal: Chemical Science 
+  date: 2020
+  url: https://pubs.rsc.org/az/content/articlehtml/2020/sc/c9sc05534g
 
+- title: Molecular Tectonics: A Node‐and‐Linker Building Block Approach to a Family of Hydrogen‐Bonded Frameworks
+  authors: S. A. Boer, M. Morshedi, A. Tarzia, C. J. Doonan, and N. G. White
+  journal: Chemistry - A European Journal 
+  date: 2019
+  url: https://chemistry-europe.onlinelibrary.wiley.com/doi/abs/10.1002/chem.201902117
 
-J.~E.~M. Lewis, \textbf{A. Tarzia}, A.~J.~P. White, and K.~E. Jelfs, "Conformational Control of Pd$_2$L$_4$ Assemblies with Unsymmetrical Ligands", \textit{Chemical Science}, 677--683 (2020).
+- title: Enhanced Activity of Enzymes Encapsulated in Hydrophilic Metal--Organic Frameworks
+  authors: W. Liang, H. Xu, F. Carraro, N. K. Maddigan, Q. Li, S. G. Bell, D. M. Huang, A. Tarzia, M. B. Solomon, H. Amenitsch, L. Vaccari, C. J. Sumby, P. Falcaro, and C. J. Doonan
+  journal: Journal of the American Chemical Society 
+  date: 2019
+  url: https://pubs.acs.org/doi/abs/10.1021/jacs.8b10302
 
+- title: Carbohydrates@MOFs
+  authors: E. Astria, M. Thonhofer, R. Ricco, W. Liang, A. Chemelli, A. Tarzia, K. Alt, C. E. Hagemeyer, J. Rattenberger, H. Schroettner, T. Wrodnigg, H. Amenitsch, D. M. Huang, C. J. Doonan, and P. Falcaro
+  journal: Materials Horizons 
+  date: 2019
+  url: https://pubs.rsc.org/fa/content/articlehtml/2019/mh/c8mh01611a
 
-S.~A. Boer, M. Morshedi, \textbf{A. Tarzia}, C.~J. Doonan, and N.~G. White, "Molecular Tectonics: A Node‐and‐Linker Building Block Approach to a Family of Hydrogen‐Bonded Frameworks", \textit{Chemistry - A European Journal}, 10006--10012 (2019).
+- title: High-Throughput Screening of Metal--Organic Frameworks for Macroscale Heteroepitaxial Alignment
+  authors: A. Tarzia, M. Takahashi, P. Falcaro, A. W. Thornton, C. J. Doonan, and D. M. Huang
+  journal: ACS Applied Materials & Interfaces 
+  date: 2018
+  url: https://pubs.acs.org/doi/abs/10.1021/acsami.8b14756
 
-W. Liang, H. Xu, F. Carraro, N.~K. Maddigan, Q. Li, S.~G. Bell, D.~M. Huang, \textbf{A. Tarzia}, M.~B. Solomon, H. Amenitsch, L. Vaccari, C.~J. Sumby, P. Falcaro, and C.~J. Doonan, "Enhanced Activity of Enzymes Encapsulated in Hydrophilic Metal--Organic Frameworks", \textit{Journal of the American Chemical Society}, 2348--2355 (2019).
+- title: Protein Surface Functionalisation as a General Strategy for Facilitating Biomimetic Mineralisation of ZIF-8
+  authors: N. Maddigan, A. Tarzia, D. M. Huang, C. J. Sumby, S. G Bell, P. Falcaro, and C. J. Doonan
+  journal: Chemical Science 
+  date: 2018
+  url: https://pubs.rsc.org/hy/content/articlehtml/2018/sc/c8sc00825f
 
-
-E. Astria, M. Thonhofer, R. Ricco, W. Liang, A. Chemelli, \textbf{A. Tarzia}, K. Alt, C.~E. Hagemeyer, J. Rattenberger, H. Schroettner, T. Wrodnigg, H. Amenitsch, D.~M. Huang, C.~J. Doonan, and P. Falcaro, "Carbohydrates@MOFs", \textit{Materials Horizons}, 969--977 (2019).
-
-
-\textbf{A. Tarzia}, M. Takahashi, P. Falcaro, A.~W. Thornton, C.~J. Doonan, and D.~M. Huang, "High-Throughput Screening of Metal--Organic Frameworks for Macroscale Heteroepitaxial Alignment", \textit{ACS Applied Materials \& Interfaces}, 40938--40950 (2018).
-
-N. Maddigan, \textbf{A. Tarzia}, D.~M. Huang, C.~J. Sumby, S.~G Bell, P. Falcaro, C.~J. Doonan, "Protein Surface Functionalisation as a General Strategy for Facilitating Biomimetic Mineralisation of ZIF-8", \textit{Chemical Science}, 4217--4223 (2018).
+- title: Synthesis, Isomerisation and Biological Properties of Mononuclear Ruthenium Complexes Containing the Bis[4(4'-methyl-2,2'-bipyridyl)]-1,7-heptane Ligand
+  authors: B. Sun, H. M. Southam, J. A. Butler, R. K. Poole, A. Burgun, A. Tarzia, R. F. Keene, and J. G Collins
+  journal: Dalton Transactions 
+  date: 2018
+  url: https://pubs.rsc.org/en/content/articlehtml/2018/dt/c7dt04595f
     
-B. Sun, H.~M. Southam, J.~A. Butler, R.~K. Poole, A. Burgun, \textbf{A. Tarzia}, R.~F. Keene, J.~G Collins, "Synthesis{,} Isomerisation and Biological Properties of Mononuclear Ruthenium Complexes Containing the Bis[4(4'-methyl-2{,}2'-bipyridyl)]-1{,}7-heptane Ligand", \textit{Dalton Transactions}, 2422--2434 (2018).
-    
-\textbf{A. Tarzia}, A.~W. Thornton, C.~J. Doonan, D.~M. Huang, "Molecular Insight into Assembly Mechanisms of Porous Aromatic Frameworks", \textit{The Journal of Physical Chemistry C}, 16381--16392 (2017).
-    
-M. Morshedi, M. Thomas, \textbf{A. Tarzia}, C.~J. Doonan, N.~G. White, "Supramolecular Anion Recognition in Water: Synthesis of Hydrogen-bonded Supramolecular Frameworks", \textit{Chemical Science}, 3019--3025 (2017).
+- title: Molecular Insight into Assembly Mechanisms of Porous Aromatic Frameworks
+  authors: A. Tarzia, A. W. Thornton, C. J. Doonan, and D. M. Huang
+  journal: The Journal of Physical Chemistry C 
+  date: 2017
+  url: https://pubs.acs.org/doi/abs/10.1021/acs.jpcc.7b04860
 
-M. Huxley, C.~J. Coghlan, A. Burgun, \textbf{A. Tarzia}, K. Sumida, C.~J. Sumby, C.~J. Doonan, "Site-specific Metal and Ligand Substitutions in a Microporous Mn2+-based Metal-organic Framework", \textit{Dalton Transactions}, 4431--4438 (2016).
+- title: Supramolecular Anion Recognition in Water: Synthesis of Hydrogen-bonded Supramolecular Frameworks
+  authors: M. Morshedi, M. Thomas, A. Tarzia, C. J. Doonan, and N. G. White
+  journal: Chemical Science 
+  date: 2017
+  url: https://pubs.rsc.org/no/content/articlehtml/2017/sc/c7sc00201g
+
+- title: Site-specific Metal and Ligand Substitutions in a Microporous Mn2+-based Metal-organic Framework
+  authors: M. Huxley, C. J. Coghlan, A. Burgun, A. Tarzia, K. Sumida, C. J. Sumby, and C. J. Doonan
+  journal: Dalton Transactions 
+  date: 2016
+  url: https://pubs.rsc.org/--/content/articlelanding/2016/dt/c5dt05023e/unauth#!divAbstract
