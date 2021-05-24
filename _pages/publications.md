@@ -33,9 +33,9 @@ author_profile: true
   <div id="container">
     <div id="left">
         <b>{{ forloop.rindex }}.</b>
-        <quotations>❝</quotations>{{ work.title }}<quotations>❞</quotations> in <quotations>❞</quotations>{{ work.booktitle }}<quotations>❞</quotations><br>
+        <quotations>❝</quotations>{{ work.title }}<quotations>❞</quotations><br>
         {{ work.authors }}.<br>
-        <i>Chapter:</i>{{ work.chapter }}. ({{ work.date }}) <a href="{{ work.url }}">DOI</a>. {{ work.other }}
+        ({{ work.date }}) <a href="{{ work.url }}">DOI</a>. {{ work.other }}
         <br>
     </div>
     <div class="clear"></div>
