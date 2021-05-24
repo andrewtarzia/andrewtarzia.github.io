@@ -8,7 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-Go here for a working website: [Imperial College website](https://www.imperial.ac.uk/people/a.tarzia). 
+I am a research associate in the [Jelfs Materials Group](https://jelfs-group.org) at Imperial College London working on the development of software and methods for the efficient screening of coordination cages and other (supra)molecular materials. I carried out my PhD at the University of Adelaide in Australia as a member of the [Huang](https://huanggroup.org/) and [Sumby-Doonan](http://www.sumbydoonangroup.com/) research groups and with support from the CSIRO. I studied the use of high-throughput methods to explore the chemical space of functional porous materials.
+
+I am actively developing open-source codes and databases for molecular materials discovery. My research focusses on the side-by-side workflows of experimental and computational chemists toward high-success materials syntheis.
 
 
 
@@ -17,4 +19,4 @@ Go here for a working website: [Imperial College website](https://www.imperial.a
 website built from
 ======
 
-This website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. 
+This website that is powered by the  and hosted on GitHub pages. 
