@@ -1,10 +1,9 @@
 ---
 layout: archive
+title: "journal articles"
 permalink: /publications/
 author_profile: true
 ---
-
-# journal articles
 
 {% for work in site.data.publications %}
   <div id="container">
@@ -19,6 +18,8 @@ author_profile: true
   </div>
   <hr>
 {% endfor %}
+
+---
 
 # book chapters
 
