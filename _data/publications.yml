@@ -1,3 +1,9 @@
+- title: mol-ellipsize: A Python package for molecular size calculation
+  authors: A. Tarzia, C. J. Doonan, and D. M. Huang
+  journal: Journal of Open Source Software 
+  date: 2021
+  other: under review
+
 - title: High-throughput Computational Evaluation of Low Symmetry Pd2L4 Cages to Aid in System Design
   authors: A. Tarzia, J. E. M. Lewis, and K. E. Jelfs
   journal: ChemRxiv 
