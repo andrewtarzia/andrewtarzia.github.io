@@ -4,6 +4,12 @@
   date: 2021
   url: https://doi.org/10.26434/chemrxiv.14604294.v1
   other: under review
+  
+ - title: Sterics and Hydrogen Bonding Control Stereochemistry and Self-Sorting in BINOL-Based Assemblies
+  authors: Y.-Q. Zou, D. Zhang, T. K. Ronson, A. Tarzia, Z. Lu, K. E. Jelfs, and J. R. Nitschke
+  journal: Journal of the American Chemical Society  
+  date: 2021
+  url: https://doi.org/10.1021/jacs.1c05172
 
 - title: "stk: An Extendable Python Framework for Automated Molecular and Supramolecular Structure Assembly and Discover"
   authors: L. Turcani, A. Tarzia, F. Szczypiński, and K. E. Jelfs
