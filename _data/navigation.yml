@@ -9,6 +9,5 @@ main:
   - title: "Outreach"
     url: /outreach/
     
-  - title: "Posts"
-    url: /posts/
-    
+  - title: "Blog Posts"
+    url: /year-archive/
