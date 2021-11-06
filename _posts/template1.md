@@ -1,7 +1,7 @@
 ---
 title: 'I am a template'
 date: 2021-11-06
-permalink: /posts/template1/
+permalink: /posts/2012/08/blog-post-1/
 tags:
   - template
 ---
