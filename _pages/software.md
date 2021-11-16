@@ -18,3 +18,9 @@ author_profile: true
 ## calculating molecular size
 
 * [mol-ellipsize](https://github.com/andrewtarzia/mol-ellipsize) is an efficient method for calculating molecular size based on fitting an ellipsoid to the vdw cloud of a molecule. Examples are provided within the github repository.
+
+
+## visualising molecular pores
+
+* [PoreMapper](https://github.com/andrewtarzia/PoreMapper) is a very efficient way to map the inside of a molecular pore for visualisation and analysis. See a blog post [here](/posts/2021/11/poremapper-post/)
+* 
