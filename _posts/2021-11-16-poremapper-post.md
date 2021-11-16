@@ -1,11 +1,14 @@
 ---
+layout: archive
 title: 'PoreMapper: Python project for mapping molecular pores'
 date: 2021-11-06
 permalink: /posts/2021/11/poremapper-post/
 author_profile: true
-tags:
-  - first
 ---
+
+PoreMapper: Python project for mapping molecular pores
+------
+
 
 Why?
 ------
