@@ -6,6 +6,8 @@ permalink: /posts/2021/11/poremapper-post/
 author_profile: true
 ---
 
+A quick and easy Python package for making blobs and pores
+------
 
 Why?
 ------
