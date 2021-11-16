@@ -22,4 +22,4 @@ author_profile: true
 
 ## visualising molecular pores
 
-* [PoreMapper](https://github.com/andrewtarzia/PoreMapper) is a very efficient way to map the inside of a molecular pore for visualisation and analysis. See a blog post [here](/posts/2021/11/poremapper-post/)
+* [PoreMapper](https://github.com/andrewtarzia/PoreMapper) is a very efficient way to map the inside of a molecular pore for visualisation and analysis. See a blog post [here](/posts/2021/11/poremapper-post/).
