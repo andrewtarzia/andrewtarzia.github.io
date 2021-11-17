@@ -61,14 +61,15 @@ final_result.pore.write_xyz_file(f'{name}_pore_final.xyz')
 Examples and limitations.
 ------
 
-Blobs provide a window pathway. Window detection. the window calculation is most costly currently Resolution/cost. Show MOC2 -- clustering is not perfect, warning! pyWindow is better! - Covers both limits.
+A ``Blob`` provides a pathways out of the molecule, and from these points, we provide simple window clustering/detection. However, the window calculation is the most costly part currently, and is not perfect. The figure below shows a metal-organic cage with four windows, where `PoreMapper` finds only two. Additionally, you can see (black arrow) that the `Pore` has some imperfections due to small asymmetries in the structure.
 
 ![imperfect](/assets/imperfect.png)
 
-Show a non porous example.
-Show the Nitschke series.. Careful of resolution here.
+The figure below shows some more examples of pores and blobs (on the right) for multiple metal-organic cages. **Importantly, to produce the coordinate files for this analysis takes < 1s**! Although I could spend ages making the figures pretty in pymol... :laughing:
 
 ![examples](/assets/example_structures.png)
+
+On the left, we see multiple cages with no windows, the one on the bottom right is entirely nonporous. The volumes calculated are within ~200 $$\AA$$ of reported VOIDOO volumes ([A paper](https://pubs.acs.org/doi/10.1021/jacs.9b03776)), but I would suggest that changes in bead diameter and resolution could be the cause of this ⚠⚠.
 
 What next?
 ------
