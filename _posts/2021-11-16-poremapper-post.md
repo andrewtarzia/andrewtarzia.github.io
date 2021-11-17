@@ -61,7 +61,7 @@ final_result.pore.write_xyz_file(f'{name}_pore_final.xyz')
 Examples and limitations.
 ------
 
-A ``Blob`` provides a pathways out of the molecule, and from these points, we provide simple window clustering/detection. However, the window calculation is the most costly part currently, and is not perfect. The figure below shows a metal-organic cage with four windows, where `PoreMapper` finds only two. Additionally, you can see (black arrow) that the `Pore` has some imperfections due to small asymmetries in the structure.
+A ``Blob`` provides a pathways out of the molecule, and from these points, we provide simple window clustering/detection. However, the window calculation is the most costly part currently, and is not perfect. The figure below shows a metal-organic cage with four windows, where `PoreMapper` _detects_ two. Additionally, you can see (black arrow) that the `Pore` has some imperfections based on beads being outside of the cavity.
 
 ![imperfect](/assets/imperfect.png)
 
@@ -69,11 +69,11 @@ The figure below shows some more examples of pores and blobs (purple on the righ
 
 ![examples](/assets/example_structures.png)
 
-On the left, we see multiple cages with no windows, the one on the bottom right is entirely nonporous. The volumes calculated are within ~200 Angstrom^3 of reported VOIDOO volumes ([a paper on this](https://pubs.acs.org/doi/10.1021/jacs.9b03776)), but I would suggest that changes in bead diameter and resolution could be the cause of this. :warning: :warning:
+On the left, we see multiple cages with no windows, the one on the right is entirely nonporous. The volumes calculated for the first three are within ~200 Angstrom^3 of reported VOIDOO volumes ([a paper on this](https://pubs.acs.org/doi/10.1021/jacs.9b03776)), but I would suggest that changes in bead diameter and resolution could be the cause of this. :warning:
 
 What next?
 ------
 
-A series of examples is provided [here](https://github.com/andrewtarzia/PoreMapper/tree/main/examples). This package is simple and after spending a short amount of time writing it and being very happy with the outcome, for visualisation at least, I decided that merging it with pyWindow (more code from the Jelfs group: [pyWindow](https://github.com/marcinmiklitz/pywindow)) would be best. This would include rewrite/clean-up/improvements/bug-fixes to pyWindow, which I hope to report on soon!
+A series of examples are provided [here](https://github.com/andrewtarzia/PoreMapper/tree/main/examples). This package is simple and after spending a short amount of time writing it and being very happy with the outcome, for visualisation at least, I decided that merging it with pyWindow (more code from the Jelfs group: [pyWindow](https://github.com/marcinmiklitz/pywindow)) would be best. This would include rewrite/clean-up/improvements/bug-fixes to pyWindow, which I hope to report on soon!
 
 **Please, test it, use it, break it and send me feedback!**
