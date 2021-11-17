@@ -24,18 +24,21 @@ PoreMapper provides a ``Host`` class, which reads in XYZ coordinates and atom ty
 
 The process begins with a `Blob` made up of `Bead`s in an idealised spherical geometry with radius of 0.1 angstrom and a number of beads defined by th size of the `Host`. Currently the `Blob` is placed at the centroid of the `Host`. Over 100 steps, the position of each `Bead` in the `Blob` is translated outwards in small increments until the maximum diameter of the `Host` is reached. If at any point a `Bead` is within contact distance (bead radii + atom radii) of a `Host` atom, it is no longer moved in following steps and added to the `Pore` class (a subset of beads in the initial `Blob`). The output of the calculation is an `InflationResult`, which contains the `Blob` and `Pore` for futher analysis.
 
+A `Blob` provides pathways out of the molecule, which we analyse, using simple clustering of points, to find the windows of the `Host`. This process is currently limited (see below) and pyWindow is recommended! Regardless, the visualisation of the pathways, and collection of those coordinates, may be useful:
 
-Describe window detection here.
+FIGURE showing CC3 BLOB
+
+A `Pore` provides a visualisation of the inside of `Host` and the class provides analyses including `get_mean/max_distance_to_com` for pore radii, `get_volume` for pore volume and `get_asphericity` for pore shape. Again, the key for me was visualisation:
+
+FIGURE showing CC3 Pore
 
 
-Code examples here:
+Most importantly, PoreMapper is simple to use in a Python project! Here is a code example of running a simple analysis of a host (CC3):
 
-
+FIGURE with code
 
 Examples?
 ------
-
-Show blowing up in CC3, with time series - kind of useful.
 
 Blobs provide a window pathway.
 
