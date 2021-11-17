@@ -12,7 +12,7 @@ A quick and easy Python package for making blobs and pores
 Why?
 ------
 
-I work mostly with metal-organic cages and, in that field, the pore is often visualised with a software called VOIDOO ([see here](https://pubmed.ncbi.nlm.nih.gov/15299456/)), which makes very pretty images. Simply, I wanted to recreate that, quickly (just for visualisation) and in Python (to interface with an [_stk_](https://stk.readthedocs.io/en/stable/) molecule). I initially planned on performing cheap dynamics on what I termed a ``Blob`` inside the cage, allowing it to mould to the interior surface. However, that was overcomplicating a relatively simple solution: just inflate a balloon inside the pore! :balloon:
+I work mostly with metal-organic cages and, in that field, the pore is often visualised with a software called VOIDOO ([see here](https://pubmed.ncbi.nlm.nih.gov/15299456/)), which makes very pretty images. Simply, I wanted to recreate that, quickly (just for visualisation) and in Python (to interface with an [_stk_](https://stk.readthedocs.io/en/stable/) molecule). I initially planned on performing cheap dynamics on what I termed a ``Blob`` inside the cage, allowing it to mould to the interior surface. However, that was overcomplicating a relatively simple solution: just inflate a balloon inside the pore!
 
 
 How?
@@ -69,7 +69,7 @@ The figure below shows some more examples of pores and blobs (purple on the righ
 
 ![examples](/assets/example_structures.png)
 
-On the left, we see multiple cages with no windows, the one on the right is entirely nonporous. The volumes calculated for the first three are within ~200 Angstrom^3 of reported VOIDOO volumes ([a paper on this](https://pubs.acs.org/doi/10.1021/jacs.9b03776)), but I would suggest that changes in bead diameter and resolution could be the cause of this. :warning:
+On the left, we see multiple cages with no windows, the one on the right is entirely nonporous. The volumes calculated for the first three are within ~200 Angstrom^3 of reported VOIDOO volumes ([a paper on this](https://pubs.acs.org/doi/10.1021/jacs.9b03776)), but I would suggest that changes in bead diameter and resolution could be the cause of this (**warning**).
 
 What next?
 ------
