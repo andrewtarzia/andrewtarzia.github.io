@@ -69,7 +69,7 @@ The figure below shows some more examples of pores and blobs (purple on the righ
 
 ![examples](/assets/example_structures.png)
 
-On the left, we see multiple cages with no windows, the one on the bottom right is entirely nonporous. The volumes calculated are within ~200 $$\AA$$ of reported VOIDOO volumes ([a paper on this](https://pubs.acs.org/doi/10.1021/jacs.9b03776)), but I would suggest that changes in bead diameter and resolution could be the cause of this :warning: :warning:.
+On the left, we see multiple cages with no windows, the one on the bottom right is entirely nonporous. The volumes calculated are within ~200 angstromcubed of reported VOIDOO volumes ([a paper on this](https://pubs.acs.org/doi/10.1021/jacs.9b03776)), but I would suggest that changes in bead diameter and resolution could be the cause of this. :warning: :warning:
 
 What next?
 ------
