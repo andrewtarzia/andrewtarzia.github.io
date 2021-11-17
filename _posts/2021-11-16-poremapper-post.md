@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: 'PoreMapper: Python project for mapping molecular pores'
+title: 'PoreMapper: Python package for mapping molecular pores'
 date: 2021-11-06
 permalink: /posts/2021/11/poremapper-post/
 author_profile: true
@@ -12,7 +12,7 @@ A quick and easy Python package for making blobs and pores
 Why?
 ------
 
-I work mostly with metal-organic cages and, in that field, the pore is often visualised with a software called VOIDOO, which makes very pretty images. Simply, I wanted to recreate that, quickly (just for visualisation) and in Python (to interface with an [stk](https://stk.readthedocs.io/en/stable/) molecule). I initially planned on performing cheap dynamics on what I termed a ``Blob`` inside the cage, allowing it to mould to the interior surface. However, that was overcomplicating a relatively simple solution: just inflate a balloon inside the pore! 🎈🎈
+I work mostly with metal-organic cages and, in that field, the pore is often visualised with a software called VOIDOO ([see here](https://pubmed.ncbi.nlm.nih.gov/15299456/)), which makes very pretty images. Simply, I wanted to recreate that, quickly (just for visualisation) and in Python (to interface with an [_stk_](https://stk.readthedocs.io/en/stable/) molecule). I initially planned on performing cheap dynamics on what I termed a ``Blob`` inside the cage, allowing it to mould to the interior surface. However, that was overcomplicating a relatively simple solution: just inflate a balloon inside the pore! :balloon:
 
 
 How?
@@ -26,11 +26,11 @@ The process begins with a `Blob` made up of `Bead`s in an idealised spherical ge
 
 A `Blob` provides pathways out of the molecule, which we analyse, using simple clustering of points, to find the windows of the `Host`. This process is currently limited (see below) and **pyWindow** is recommended! Regardless, the visualisation of the pathways, and collection of those coordinates, may be useful:
 
-![Inflation of a blob inside the porous organic cage, CC3](/assets/cc3blob.png)
+![blob inside CC3](/assets/cc3blob.png)
 
 A `Pore` provides a visualisation of the inside of `Host` and the class provides analyses including `get_mean/max_distance_to_com` for pore radii, `get_volume` for pore volume and `get_asphericity` for pore shape. Again, the key for me was visualisation:
 
-![Inflation of a pore inside the porous organic cage, CC3](/assets/cc3pore.png)
+![pore inside CC3](/assets/cc3pore.png)
 
 Most importantly, PoreMapper is simple to use in a Python project! Here is a code example of running a simple analysis of a host from an XYZ file:
 
@@ -65,15 +65,15 @@ A ``Blob`` provides a pathways out of the molecule, and from these points, we pr
 
 ![imperfect](/assets/imperfect.png)
 
-The figure below shows some more examples of pores and blobs (on the right) for multiple metal-organic cages. **Importantly, to produce the coordinate files for this analysis takes < 1s**! Although I could spend ages making the figures pretty in pymol... :laughing:
+The figure below shows some more examples of pores and blobs (purple on the right; all others have equivalent blobs and pores because there are no windows!) for multiple metal-organic cages. **Importantly, to produce the coordinate files for this analysis takes < 1s**! Although I could spend ages making the figures pretty in pymol...
 
 ![examples](/assets/example_structures.png)
 
-On the left, we see multiple cages with no windows, the one on the bottom right is entirely nonporous. The volumes calculated are within ~200 $$\AA$$ of reported VOIDOO volumes ([A paper](https://pubs.acs.org/doi/10.1021/jacs.9b03776)), but I would suggest that changes in bead diameter and resolution could be the cause of this ⚠⚠.
+On the left, we see multiple cages with no windows, the one on the bottom right is entirely nonporous. The volumes calculated are within ~200 $$\AA$$ of reported VOIDOO volumes ([a paper on this](https://pubs.acs.org/doi/10.1021/jacs.9b03776)), but I would suggest that changes in bead diameter and resolution could be the cause of this :warning: :warning:.
 
 What next?
 ------
 
 This package is simple and after spending a short amount of time writing it and being very happy with the outcome, for visualisation at least, I decided that merging it with pyWindow (more code from the Jelfs group: [pyWindow](https://github.com/marcinmiklitz/pywindow)) would be best. This would include rewrite/clean-up/improvements/bug-fixes to pyWindow, which I hope to report on soon!
 
-Please, test it, use it, break it and send me feedback!
+**Please, test it, use it, break it and send me feedback!**
