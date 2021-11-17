@@ -58,27 +58,17 @@ final_result.pore.write_xyz_file(f'{name}_pore_final.xyz')
 
 ```
 
-Examples?
+Examples and limitations.
 ------
 
-Blobs provide a window pathway.
+Blobs provide a window pathway. Window detection. the window calculation is most costly currently Resolution/cost. Show MOC2 -- clustering is not perfect, warning! pyWindow is better! - Covers both limits.
+
+![imperfect](/assets/imperfect.png)
 
 Show a non porous example.
-
 Show the Nitschke series.. Careful of resolution here.
 
-
-
-Limitations?
-------
-
-Window detection.
-
-the window calculation is most costly currently
-
-Resolution/cost.
-
-Show MOC2 -- clustering is not perfect, warning! pyWindow is better! - Covers both limits.
+![examples](/assets/example_structures.png)
 
 What next?
 ------
