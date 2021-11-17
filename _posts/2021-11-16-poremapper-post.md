@@ -26,13 +26,11 @@ The process begins with a `Blob` made up of `Bead`s in an idealised spherical ge
 
 A `Blob` provides pathways out of the molecule, which we analyse, using simple clustering of points, to find the windows of the `Host`. This process is currently limited (see below) and pyWindow is recommended! Regardless, the visualisation of the pathways, and collection of those coordinates, may be useful:
 
-![Words](/cc3blob.png)
-FIGURE showing CC3 BLOB
+![Inflation of a blob inside the porous organic cage, CC3](cc3blob.png)
 
 A `Pore` provides a visualisation of the inside of `Host` and the class provides analyses including `get_mean/max_distance_to_com` for pore radii, `get_volume` for pore volume and `get_asphericity` for pore shape. Again, the key for me was visualisation:
 
-FIGURE showing CC3 Pore
-
+![Inflation of a pore inside the porous organic cage, CC3](cc3pore.png)
 
 Most importantly, PoreMapper is simple to use in a Python project! Here is a code example of running a simple analysis of a host (CC3):
 
