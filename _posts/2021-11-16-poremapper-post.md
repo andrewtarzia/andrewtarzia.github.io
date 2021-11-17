@@ -22,7 +22,7 @@ I will start by noting that a lot of the more frustrating parts of this code wer
 
 PoreMapper provides a ``Host`` class, which reads in XYZ coordinates and atom types: this is the cage of interest. The calculation is handled by the ``Inflater`` class, which takes only one argument: the ``bead_sigma`` or radius of the `Bead`s that will be used to map the pore. The ``Inflater`` has two methods: `get_inflated_blob` and `inflate_blob`, which perform the same process, except `get_inflated_blob` only yields the final result, not each step.
 
-The process begins with a `Blob` made up of `Bead`s in an idealised spherical geometry with radius of 0.1 $\AA$ and a number of beads defined by th size of the `Host`. Currently the `Blob` is placed at the centroid of the `Host`. Over 100 steps, the position of each `Bead` in the `Blob` is translated outwards in small increments until the maximum diameter of the `Host` is reached. If at any point a `Bead` is within contact distance (bead radii + atom radii) of a `Host` atom, it is no longer moved in following steps and added to the `Pore` class (a subset of beads in the initial `Blob`). The output of the calculation is an `InflationResult`, which contains the `Blob` and `Pore` for futher analysis.
+The process begins with a `Blob` made up of `Bead`s in an idealised spherical geometry with radius of 0.1 Angstrom and a number of beads defined by th size of the `Host`. Currently the `Blob` is placed at the centroid of the `Host`. Over 100 steps, the position of each `Bead` in the `Blob` is translated outwards in small increments until the maximum diameter of the `Host` is reached. If at any point a `Bead` is within contact distance (bead radii + atom radii) of a `Host` atom, it is no longer moved in following steps and added to the `Pore` class (a subset of beads in the initial `Blob`). The output of the calculation is an `InflationResult`, which contains the `Blob` and `Pore` for futher analysis.
 
 A `Blob` provides pathways out of the molecule, which we analyse, using simple clustering of points, to find the windows of the `Host`. This process is currently limited (see below) and **pyWindow** is recommended! Regardless, the visualisation of the pathways, and collection of those coordinates, may be useful:
 
@@ -69,7 +69,7 @@ The figure below shows some more examples of pores and blobs (purple on the righ
 
 ![examples](/assets/example_structures.png)
 
-On the left, we see multiple cages with no windows, the one on the bottom right is entirely nonporous. The volumes calculated are within ~200 \AA^3 of reported VOIDOO volumes ([a paper on this](https://pubs.acs.org/doi/10.1021/jacs.9b03776)), but I would suggest that changes in bead diameter and resolution could be the cause of this. :warning: :warning:
+On the left, we see multiple cages with no windows, the one on the bottom right is entirely nonporous. The volumes calculated are within ~200 Angstrom^3 of reported VOIDOO volumes ([a paper on this](https://pubs.acs.org/doi/10.1021/jacs.9b03776)), but I would suggest that changes in bead diameter and resolution could be the cause of this. :warning: :warning:
 
 What next?
 ------
