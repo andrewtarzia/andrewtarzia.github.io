@@ -34,7 +34,29 @@ A `Pore` provides a visualisation of the inside of `Host` and the class provides
 
 Most importantly, PoreMapper is simple to use in a Python project! Here is a code example of running a simple analysis of a host from an XYZ file:
 
-![Code example](/assets/code_example.png)
+```python
+import pore_mapper as pm
+
+# Read in host from xyz file.
+host = pm.Host.init_from_xyz_file(path=f'{name}.xyz')
+host = host.with_centroid([0., 0., 0.])
+
+# Define calculator object.
+calculator = pm.Inflater(bead_sigma=1.0)
+
+# Run calculator on host object, analysing output.
+final_result = calculator.get_inflated_blob(host=host)
+
+# Analysis.
+windows = final_result.pore.get_windows()
+print(f'windows: {windows}, pore_volume: {pore.get_volume()}') 
+
+# Write final structure.
+host.write_xyz_file(f'{name}_final.xyz')
+final_result.pore.get_blob().write_xyz_file(f'{name}_blob_final.xyz')
+final_result.pore.write_xyz_file(f'{name}_pore_final.xyz')
+
+```
 
 Examples?
 ------
