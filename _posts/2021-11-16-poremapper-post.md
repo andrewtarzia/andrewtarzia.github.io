@@ -16,9 +16,7 @@ I work mostly with metal-organic cages and, in that field, the pore is often vis
 
 An example usage that highlights "why" is available as part of my YouTube tutorials:
 
-< p align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SeSRnG4LbnE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
 
 How?
 ------
