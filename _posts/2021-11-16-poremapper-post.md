@@ -21,7 +21,7 @@ An example usage that highlights "why" is available as part of my YouTube tutori
 How?
 ------
 
-I will start by noting that a lot of the more frustrating parts of this code were taken directly for [pyWindow](https://github.com/marcinmiklitz/pywindow), which was developed by Marcin Miklitz during his time in the Jelfs group. I thank him for saving me some time! Additionally, I must thank Austin Mroz, a postdoc in the Jelfs group, who shared with me the atomic radii from her recent work: [STREUSEL](https://github.com/hmsoregon/STREUSEL) (paper [here](https://chemrxiv.org/engage/chemrxiv/article-details/61b284180e35ebcbb19bba3b)). These radii are used for all ``Atom``s in the ``Host`` class.
+I will start by noting that a lot of the more frustrating parts of this code were taken directly for [pyWindow](https://github.com/marcinmiklitz/pywindow), which was developed by Marcin Miklitz during his time in the Jelfs group. I thank him for saving me some time! Additionally, I must thank Austin Mroz, a postdoc in the Jelfs group, who shared with me the atomic radii from their recent work: [STREUSEL](https://github.com/hmsoregon/STREUSEL) (paper [here](https://chemrxiv.org/engage/chemrxiv/article-details/61b284180e35ebcbb19bba3b)). These radii are used for all ``Atom``s in the ``Host`` class.
 
 PoreMapper provides a ``Host`` class, which reads in XYZ coordinates and atom types: this is the cage of interest. The calculation is handled by the ``Inflater`` class, which takes only one argument: the ``bead_sigma`` or radius of the `Bead`s that will be used to map the pore (i.e., resolution). The ``Inflater`` has two methods: `get_inflated_blob` and `inflate_blob`, which perform the same process, except `get_inflated_blob` only yields the final result, not each step.
 
@@ -64,15 +64,15 @@ final_result.pore.write_xyz_file(f'{name}_pore_final.xyz')
 Examples and limitations.
 ------
 
-A ``Blob`` provides a pathways out of the molecule, and from these points, we provide simple window clustering/detection. However, the window calculation is the most costly part currently, and is not perfect. The figure below shows a metal-organic cage with four windows, where `PoreMapper` _detects_ two. Additionally, you can see (black arrow) that the `Pore` has some imperfections based on beads being outside of the cavity.
+A ``Blob`` provides pathways out of the molecule, and from these points, we provide simple window clustering/detection. However, the window calculation is the most costly part currently, and is not perfect. The figure below shows a metal-organic cage with four windows, where `PoreMapper` _detects_ two. Additionally, you can see (black arrow) that the `Pore` has some imperfections based on beads being outside of the cavity.
 
 ![imperfect](/assets/imperfect.png)
 
-The figure below shows some more examples of pores and blobs (purple on the right; all others have equivalent blobs and pores because there are no windows!) for multiple metal-organic cages. **Importantly, to produce the coordinate files for this analysis takes < 1s**! Although I could spend ages making the figures pretty in pymol...
+The figure below shows some more examples of pores and blobs (purple on the right; all others have equivalent blobs and pores because there are no windows!) for multiple metal-organic cages. **Importantly, to produce the coordinate files for this analysis takes a couple of seconds**! Although I could spend ages making the figures pretty in pymol...
 
 ![examples](/assets/example_structures.png)
 
-On the left, we see multiple cages with no windows, the one on the right is entirely nonporous. The volumes calculated for the first three are within ~200 Angstrom^3 of reported VOIDOO volumes ([a paper on this](https://pubs.acs.org/doi/10.1021/jacs.9b03776)), but I would suggest that changes in bead diameter and resolution could be the cause of this (**warning**).
+On the left, we see multiple cages with no windows, the one on the right is entirely nonporous. The volumes calculated for the first three are within ~200 Angstrom^3 of reported VOIDOO volumes ([a paper on this](https://pubs.acs.org/doi/10.1021/jacs.9b03776)), but I would suggest that changes in bead diameter and resolution could be the cause of this (**warning of the sensitivity**).
 
 What next?
 ------
