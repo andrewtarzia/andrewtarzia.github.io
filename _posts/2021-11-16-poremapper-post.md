@@ -77,6 +77,8 @@ On the left, we see multiple cages with no windows, the one on the right is enti
 What next?
 ------
 
+It is available on [GitHub](https://github.com/andrewtarzia/PoreMapper) and can be installed through pip!
+
 A series of examples are provided [here](https://github.com/andrewtarzia/PoreMapper/tree/main/examples). This package is simple and after spending a short amount of time writing it and being very happy with the outcome, for visualisation at least, I decided that merging it with pyWindow (more code from the Jelfs group: [pyWindow](https://github.com/marcinmiklitz/pywindow)) would be best. This would include rewrite/clean-up/improvements/bug-fixes to pyWindow, which I hope to report on soon!
 
 **Please, test it, use it, break it and send me feedback!**
