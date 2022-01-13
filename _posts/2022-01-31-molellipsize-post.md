@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: 'Molellipsize: Python package for calculating the size of molecules'
+title: 'mol-ellipsize: Python package for calculating the size of molecules'
 date: 2022-01-31
 permalink: /posts/2022/01/molellipsize-post/
 author_profile: true
