@@ -13,10 +13,7 @@ I am a research associate in the [Jelfs Materials Group](https://jelfs-group.org
 I am actively developing open-source codes and databases for molecular materials discovery. My research focusses on the side-by-side workflows of experimental and computational chemists toward high-success materials syntheis.
 
 
-
-
-
 website built from
 ======
 
-This website that is powered by the  and hosted on GitHub pages. 
+This website is powered by [academicpages](https://github.com/academicpages/academicpages.github.io)  and hosted on GitHub pages. 
