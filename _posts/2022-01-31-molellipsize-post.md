@@ -37,22 +37,33 @@ The whole process using `RDKit` looks something like this:
 Examples and limitations.
 ------
 
-We have parameterised our algorithm, most importantly the vdW radii, using a test-set of kinetic diameters for small molecules. For molecular size, we use the minimum intermediate diameter ($d$) of all conformers of a molecule. We expect the limitations to come about for very large (this would also be very slow and memory intensive!) and flexible molecules, where the number of conformers needed to be sampled increases or ETKDG fails. The parity plots below summarise the agreement with kinetic diameters - more details are available in [here (this code is too short for JOSS)](https://github.com/andrewtarzia/mol-ellipsize/tree/main/paper). The defaults in `mol-ellipsize` are based on this parameterisation. Users should consider the trade-off between accuracy and computational efficiency.
+We have parameterised our algorithm, most importantly the vdW radii, using a test-set of kinetic diameters for small molecules. For molecular size, we use the minimum intermediate diameter ($d$) of all conformers of a molecule. We expect the limitations to come about for very large (this would also be very slow and memory intensive!) and flexible molecules, where the number of conformers needed to be sampled increases or ETKDG fails. The parity plots below summarise the agreement with kinetic diameters - more details are available in [here (this code is too short for JOSS, but I did write a paper for it)](https://github.com/andrewtarzia/mol-ellipsize/tree/main/paper). The defaults in `mol-ellipsize` are based on this parameterisation. Users should consider the trade-off between accuracy and computational efficiency.
 
 ![Parity plots](/assets/main_parities.png)
 
 
-Arbitrary coordinates...
+The final thing to show is that the ``EllipsoidTool`` can be used on arbitrary coordinates. For example, the code below takes a pore from an xyz file output by `PoreMapper` and fits an ellipsoid to it.
 
 ```python
 # Code example of arbitrary coordinates.
 
-```
+# Read XYZ coordinates.
+coordinates = []
+with open(pore, 'r') as f:
+    for line in f.readlines()[2:]:
+        elem, x, y, z = line.rstrip().split()
+        coordinates.append([float(x), float(y), float(z)])
+coordinates = np.array(coordinates)
 
+# No settings needed, but vdw radii not considered.
+ET = mes.EllipsoidTool()
+center, radii, rotation = ET.get_min_vol_ellipse(coordinates)
+print(f'{pore_name} with radii: {radii}')
+```
 
 More example uses are available as part of my YouTube tutorials:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SeSRnG4LbnE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/JojLBq7qmjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 What next?
 ------
