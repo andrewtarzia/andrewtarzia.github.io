@@ -37,7 +37,7 @@ The whole process using `RDKit` looks something like this:
 Examples and limitations.
 ------
 
-We have parameterised our algorithm, most importantly the vdW radii, using a test-set of kinetic diameters for small molecules. For molecular size, we use the minimum intermediate diameter ($d$) of all conformers of a molecule. We expect the limitations to come about for very large (this would also be very slow and memory intensive!) and flexible molecules, where the number of conformers needed to be sampled increases or ETKDG fails. The parity plots below summarise the agreement with kinetic diameters - more details are available in [here (this code is too short for JOSS, but I did write a paper for it)](https://github.com/andrewtarzia/mol-ellipsize/tree/main/paper). The defaults in `mol-ellipsize` are based on this parameterisation. Users should consider the trade-off between accuracy and computational efficiency.
+We have parameterised our algorithm, most importantly the vdW radii, using a test-set of kinetic diameters for small molecules. For molecular size, we use the minimum intermediate diameter ($d$) of all conformers of a molecule. We expect the limitations to come about for very large (this would also be very slow and memory intensive!) and flexible molecules, where the number of conformers needed to be sampled increases or ETKDG fails. The parity plots below summarise the agreement with kinetic diameters - more details are available in [here (JOSS paper format)](https://github.com/andrewtarzia/mol-ellipsize/tree/main/paper). The defaults in `mol-ellipsize` are based on this parameterisation. Users should consider the trade-off between accuracy and computational efficiency.
 
 ![Parity plots](/assets/main_parities.png)
 
