@@ -63,7 +63,7 @@ print(f'{pore_name} with radii: {radii}')
 
 More example uses are available as part of my YouTube tutorials:
 
-<iframe width="560" height="315" src="https://youtu.be/JojLBq7qmjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JojLBq7qmjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 What next?
 ------
