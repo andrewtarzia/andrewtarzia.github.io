@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: 'A new general molecular aligner in stko'
+title: 'A new general molecule aligner in stko'
 date: 2022-03-19
 permalink: /posts/2022/03/aligner-post/
 author_profile: true
