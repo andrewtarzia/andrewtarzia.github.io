@@ -21,7 +21,7 @@ The `Aligner` `Optimizer` is implemented in [`stko`](https://github.com/JelfsMat
 
 Fine-tuning can be necessary (the interface in `stko` will be improved in the future to make this easier), but in the tutorial, I show it is pretty general using the default settings.
 
-<iframe width="280" height="160" src="https://www.youtube.com/embed/SeSRnG4LbnE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SqX8xN3jBR0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Examples are available in the `stko` [examples directory](https://github.com/JelfsMaterialsGroup/stko/tree/master/examples) and [`stk-examples`](https://github.com/andrewtarzia/stk-examples).
 
