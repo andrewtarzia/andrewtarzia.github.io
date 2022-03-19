@@ -19,7 +19,7 @@ The `Aligner` `Optimizer` is implemented in [`stko`](https://github.com/JelfsMat
 
 ![code example](/assets/alignment_example_2.png)
 
-Fine-tuning can be necessary (the interface in `stko` will be improved in the future to make this easier), but in the tutorial, I show it is pretty general using the default settings.
+Fine-tuning can be necessary (the interface in `stko` will be improved in the future to make this easier), but in the tutorial, I show it is pretty general using the default settings. Indeed, the examples here and in the tutorial show it can be applied to molecules that are not the same. Ultimately though, **there is likely a better option for aligning small molecules**.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SqX8xN3jBR0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
