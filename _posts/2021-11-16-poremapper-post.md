@@ -12,7 +12,7 @@ A quick and easy way to make blobs and pores
 Why?
 ------
 
-I work mostly with metal-organic cages and, in that field, the pore is often visualised with a software called VOIDOO ([see here](https://pubmed.ncbi.nlm.nih.gov/15299456/)), which makes very pretty images. Simply, I wanted to recreate that, quickly (just for visualisation) and in Python (to interface with an [_stk_](https://stk.readthedocs.io/en/stable/) molecule). I initially planned on performing cheap dynamics on what I termed a ``Blob`` inside the cage, allowing it to mould to the interior surface. However, that was overcomplicating a relatively simple solution: just inflate a balloon inside the pore!
+I work mostly with metal-organic cages and, in that field, the pore is often visualised with a software called VOIDOO ([see here](https://pubmed.ncbi.nlm.nih.gov/15299456/)), which makes very pretty images. I wanted to recreate that, quickly (just for visualisation) and in Python (to interface with an [_stk_](https://stk.readthedocs.io/en/stable/) molecule). I initially planned on performing cheap dynamics on what I termed a ``Blob`` inside the cage, allowing it to mould to the interior surface. However, that was overcomplicating the issue. Instead, just inflate a balloon inside the pore!
 
 An example usage that highlights "why" is available as part of my YouTube tutorials:
 
@@ -27,7 +27,7 @@ PoreMapper provides a ``Host`` class, which reads in XYZ coordinates and atom ty
 
 The process begins with a `Blob` made up of `Bead`s in an idealised spherical geometry with radius of 0.1 Angstrom and a number of beads defined by the size of the `Host`. The `Blob` is placed at the centroid of the `Host`. Over 100 steps, the position of each `Bead` in the `Blob` is translated outwards in small increments until the maximum diameter of the `Host` is reached. If at any point a `Bead` is within contact distance (bead radii + atom radii) of a `Host` atom, it is no longer moved in following steps and added to the `Pore` class (a subset of beads in the initial `Blob`). The output of the calculation is an `InflationResult`, which contains the `Blob` and `Pore` for futher analysis.
 
-A `Blob` provides pathways out of the molecule, which we analyse, by clustering the points (simple `MeanShift` usage from `sklearn`), to find the windows of the `Host`. This process is currently limited (see below) and **pyWindow** is recommended! Regardless, the visualisation of the pathways, and collection of those coordinates, may be useful. This figure shows the inflation of the blob in CC3:
+A `Blob` provides pathways out of the molecule, which we analyse, by clustering the points (`MeanShift` usage from `sklearn`), to find the windows of the `Host`. This process is currently limited (see below) and **pyWindow** is recommended! Regardless, the visualisation of the pathways, and collection of those coordinates, may be useful. This figure shows the inflation of the blob in CC3:
 
 ![blob inside CC3](/assets/cc3blob.png)
 
@@ -35,7 +35,7 @@ A `Pore` provides a visualisation of the inside of `Host` and the class provides
 
 ![pore inside CC3](/assets/cc3pore.png)
 
-Most importantly, PoreMapper is simple to use in a Python project! Here is a code example of running a simple analysis of a host from an XYZ file:
+Most importantly, PoreMapper is easy to use in a Python project! Here is a code example of running an analysis of a host from an XYZ file:
 
 ```python
 import pore_mapper as pm
@@ -64,7 +64,7 @@ final_result.pore.write_xyz_file(f'{name}_pore_final.xyz')
 Examples and limitations.
 ------
 
-A ``Blob`` provides pathways out of the molecule, and from these points, we provide simple window clustering/detection. However, the window calculation is the most costly part currently, and is not perfect. The figure below shows a metal-organic cage with four windows, where `PoreMapper` _detects_ two. Additionally, you can see (black arrow) that the `Pore` has some imperfections based on beads being outside of the cavity.
+A ``Blob`` provides pathways out of the molecule, and from these points, we provide window clustering/detection. However, the window calculation is the most costly part currently, and is not perfect. The figure below shows a metal-organic cage with four windows, where `PoreMapper` _detects_ two. Additionally, you can see (black arrow) that the `Pore` has some imperfections based on beads being outside of the cavity.
 
 ![imperfect](/assets/imperfect.png)
 
@@ -79,6 +79,6 @@ What next?
 
 It is available on [GitHub](https://github.com/andrewtarzia/PoreMapper) and can be installed through pip!
 
-A series of examples are provided [here](https://github.com/andrewtarzia/PoreMapper/tree/main/examples). This package is simple and after spending a short amount of time writing it and being very happy with the outcome, for visualisation at least, I decided that merging it with pyWindow (more code from the Jelfs group: [pyWindow](https://github.com/marcinmiklitz/pywindow)) would be best. This would include rewrite/clean-up/improvements/bug-fixes to pyWindow, which I hope to report on soon!
+A series of examples are provided [here](https://github.com/andrewtarzia/PoreMapper/tree/main/examples). This package is small and after spending a short amount of time writing it and being very happy with the outcome, for visualisation at least, I decided that merging it with pyWindow (more code from the Jelfs group: [pyWindow](https://github.com/marcinmiklitz/pywindow)) would be best. This would include rewrite/clean-up/improvements/bug-fixes to pyWindow, which I hope to report on soon!
 
 **Please, test it, use it, break it and send me feedback!**
