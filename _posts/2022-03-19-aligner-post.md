@@ -15,7 +15,7 @@ My solution was to use [`SpinDry`](https://github.com/andrewtarzia/SpinDry/tree/
 
 ![CC3 alignment](/assets/alignment_example.png)
 
-The `Aligner` `Optimizer` is implemented in [`stko`](https://github.com/JelfsMaterialsGroup/stko) and is now in the latest `pip` version. Additionally, two new RMSD calculators were added. The interface is quite simple:
+The `Aligner` `Optimizer` is implemented in [`stko`](https://github.com/JelfsMaterialsGroup/stko) and is now in the latest `pip` version. Additionally, two new RMSD calculators were added. The interface is as follows:
 
 ![code example](/assets/alignment_example_2.png)
 
