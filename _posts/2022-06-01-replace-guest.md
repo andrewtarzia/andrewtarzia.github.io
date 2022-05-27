@@ -12,56 +12,106 @@ A script to swap hosts and guests in complexes
 Why?
 ------
 
-I work mostly with metal-organic cages and, in that field, the pore is often visualised with a software called VOIDOO ([see here](https://pubmed.ncbi.nlm.nih.gov/15299456/)), which makes very pretty images. I wanted to recreate that, quickly (just for visualisation) and in Python (to interface with an [_stk_](https://stk.readthedocs.io/en/stable/) molecule). I initially planned on performing cheap dynamics on what I termed a ``Blob`` inside the cage, allowing it to mould to the interior surface. However, that was overcomplicating the issue. Instead, just inflate a balloon inside the pore!
-
+Simply put, a co-worker asked if `stk` could swap one guest for another in a host-guest complex (regardless of chemistry), and I already had some code for doing it, but thought it is pretty useful for everyone. So, here we are!
 
 
 How?
 ------
 
-`NetworkX` is very powerful here. The entire script in the examples directory is shown below.
+The entire script in the examples directory is shown below and is available, alongside Jupyter notebooks used in the video below, [here](https://github.com/andrewtarzia/stk-examples).
+This process uses `stk` to read the host-guest and new guest molecules. 
+But, [`NetworkX`](https://networkx.org/) is the real hero here!
+Basically, we convert the `stk.Molecule` class to a `NetworkX.graph` based on the bonds and atoms in the molecule.
+Then, use the `NetworkX.connected_components(graph)` to get atoms that are not bonded (e.g. host and guest molecules).
+The rest is simple: a helper function to collect either the biggest (host) or smallest (guest) component, and then build a new `stk.host_guest.Complex` `ConstructedMolecule` from the host and the new guest.
+A reasonable conformer is produced using `SpinDry` (`stk.Spinner`).
 
-
-
-
-
-I will start by noting that a lot of the more frustrating parts of this code were taken directly for [pyWindow](https://github.com/marcinmiklitz/pywindow), which was developed by Marcin Miklitz during his time in the Jelfs group. I thank him for saving me some time! Additionally, I must thank Austin Mroz, a postdoc in the Jelfs group, who shared with me the atomic radii from their recent work: [STREUSEL](https://github.com/hmsoregon/STREUSEL) (paper [here](https://chemrxiv.org/engage/chemrxiv/article-details/61b284180e35ebcbb19bba3b)). These radii are used for all ``Atom``s in the ``Host`` class.
-
-PoreMapper provides a ``Host`` class, which reads in XYZ coordinates and atom types: this is the cage of interest. The calculation is handled by the ``Inflater`` class, which takes only one argument: the ``bead_sigma`` or radius of the `Bead`s that will be used to map the pore (i.e., resolution). The ``Inflater`` has two methods: `get_inflated_blob` and `inflate_blob`, which perform the same process, except `get_inflated_blob` only yields the final result, not each step.
-
-The process begins with a `Blob` made up of `Bead`s in an idealised spherical geometry with radius of 0.1 Angstrom and a number of beads defined by the size of the `Host`. The `Blob` is placed at the centroid of the `Host`. Over 100 steps, the position of each `Bead` in the `Blob` is translated outwards in small increments until the maximum diameter of the `Host` is reached. If at any point a `Bead` is within contact distance (bead radii + atom radii) of a `Host` atom, it is no longer moved in following steps and added to the `Pore` class (a subset of beads in the initial `Blob`). The output of the calculation is an `InflationResult`, which contains the `Blob` and `Pore` for futher analysis.
-
-A `Blob` provides pathways out of the molecule, which we analyse, by clustering the points (`MeanShift` usage from `sklearn`), to find the windows of the `Host`. This process is currently limited (see below) and **pyWindow** is recommended! Regardless, the visualisation of the pathways, and collection of those coordinates, may be useful. This figure shows the inflation of the blob in CC3:
-
-
-A `Pore` provides a visualisation of the inside of `Host` and the class provides analyses including `get_mean/max_distance_to_com` for pore radii, `get_volume` for pore volume and `get_asphericity` for pore shape. Again, the key for me was visualisation. This figure shows the inflation of the pore in CC3:
-
-
-
-Most importantly, PoreMapper is easy to use in a Python project! Here is a code example of running an analysis of a host from an XYZ file:
 
 ```python
-import pore_mapper as pm
+import stk
+import networkx as nx
+import sys
+import os
 
-# Read in host from xyz file.
-host = pm.Host.init_from_xyz_file(path=f'{name}.xyz')
-host = host.with_centroid([0., 0., 0.])
 
-# Define calculator object.
-calculator = pm.Inflater(bead_sigma=1.0)
+def get_disconnected_components(molecule):
 
-# Run calculator on host object, analysing output.
-final_result = calculator.get_inflated_blob(host=host)
+    # Produce a graph from the molecule that does not include edges
+    # where the bonds to be optimized are.
+    mol_graph = nx.Graph()
+    for atom in molecule.get_atoms():
+        mol_graph.add_node(atom.get_id())
 
-# Analysis.
-windows = final_result.pore.get_windows()
-print(f'windows: {windows}, pore_volume: {pore.get_volume()}') 
+    # Add edges.
+    for bond in molecule.get_bonds():
+        pair_ids = (
+            bond.get_atom1().get_id(), bond.get_atom2().get_id()
+        )
+        mol_graph.add_edge(*pair_ids)
 
-# Write final structure.
-host.write_xyz_file(f'{name}_final.xyz')
-final_result.pore.get_blob().write_xyz_file(f'{name}_blob_final.xyz')
-final_result.pore.write_xyz_file(f'{name}_pore_final.xyz')
+    # Get atom ids in disconnected subgraphs.
+    components = {}
+    for c in nx.connected_components(mol_graph):
+        c_ids = sorted(c)
+        molecule.write('temp_mol.mol', atom_ids=c_ids)
+        num_atoms = len(c_ids)
+        newbb = stk.BuildingBlock.init_from_file('temp_mol.mol')
+        os.system('rm temp_mol.mol')
 
+        components[num_atoms] = newbb
+
+    return components
+
+
+def extract_host(molecule):
+    components = get_disconnected_components(molecule)
+    return components[max(components.keys())]
+
+
+def extract_guest(molecule):
+    components = get_disconnected_components(molecule)
+    return components[min(components.keys())]
+
+
+def main():
+    if (not len(sys.argv) == 3):
+        print(
+            f'Usage: {__file__}\n'
+            '   Expected 2 arguments: host_with_g_file new_guest_file'
+        )
+        sys.exit()
+    else:
+        host_with_g_file = sys.argv[1]
+        new_guest_file = sys.argv[2]
+
+    # Load in host.
+    host_with_guest = stk.BuildingBlock.init_from_file(host_with_g_file)
+    
+    # Load in new guest.
+    new_guest = stk.BuildingBlock.init_from_file(new_guest_file)
+    
+    # Split host and guest, assuming host has more atoms than guest.
+    host = extract_host(host_with_guest)
+    old_guest = extract_guest(host_with_guest)
+    
+    # Build new host-guest structure, with Spindry optimiser to 
+    # do some conformer searching.
+    new_host = stk.ConstructedMolecule(
+        stk.host_guest.Complex(
+            host=stk.BuildingBlock.init_from_molecule(host),
+            guests=(stk.host_guest.Guest(new_guest), ),
+            # There are options for the Spinner class, 
+            # if the optimised conformer is crap.
+            optimizer=stk.Spinner(),
+        ),
+    )
+    
+    # Write out new host guest.
+    new_host.write('new_host_guest.mol')
+
+
+if __name__ == '__main__':
+    main()
 ```
 
 Examples and limitations.
@@ -70,8 +120,6 @@ Examples and limitations.
 Currently, the provided script swaps out the smallest molecule in a complex for the new molecule (defined from `.mol` files). However, the tutorial below shows that we can swap the host or guest for any `stk` molecule. Additionally, we could easily extend this to systems with more than two distinct molecules. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SeSRnG4LbnE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Jupyter notebooks are available [here](https://github.com/andrewtarzia/stk-examples)
 
 
 **Please, test it, use it, break it and send me feedback!**
