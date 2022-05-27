@@ -120,7 +120,7 @@ Examples and limitations.
 
 Currently, the provided script swaps out the smallest molecule in a complex for the new molecule (defined from `.mol` files). However, the tutorial below shows that we can swap the host or guest for any `stk` molecule. Additionally, we could easily extend this to systems with more than two distinct molecules. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SeSRnG4LbnE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J29eoc9CZ98" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 **Please, test it, use it, break it and send me feedback!**
