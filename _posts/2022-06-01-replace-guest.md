@@ -25,6 +25,7 @@ Basically, we convert the `stk.Molecule` class to a `NetworkX.graph` based on th
 Then, use the `NetworkX.connected_components(graph)` to get atoms that are not bonded (e.g. host and guest molecules).
 The rest is simple: a helper function to collect either the biggest (host) or smallest (guest) component, and then build a new `stk.host_guest.Complex` `ConstructedMolecule` from the host and the new guest.
 A reasonable conformer is produced using `SpinDry` (`stk.Spinner`).
+What I like about this is that `stk` does not care about what the host and guest actually are - so use your imagination about what structural replacements you can do!
 
 
 ```python
