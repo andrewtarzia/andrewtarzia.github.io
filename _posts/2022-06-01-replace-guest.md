@@ -6,9 +6,6 @@ permalink: /posts/2022/06/replace-post/
 author_profile: true
 ---
 
-A script to swap hosts and guests in complexes
-------
-
 Why?
 ------
 
