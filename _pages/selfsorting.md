@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "selfsorting"
+title: "self sorting outcomes in cage-like molecules"
 permalink: /selfsort/
 author_profile: true
 ---
