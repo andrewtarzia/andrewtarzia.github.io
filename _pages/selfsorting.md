@@ -9,11 +9,17 @@ author_profile: true
 
 These were introduced based on our coarse-grained model here: DOI
 
-This is just a simple interface, where you input the angles and building blocks of interest and the data will be collated for you.
+Based on building block properties, we have defined self sort maps, which give an idea of what cage topology you are likely to get:
 
-Go to Notion link: [Database](https://tarziaresearch.notion.site/actual-app-5a5b2f3c5a564fdeaf59c0752bf1ca6f)
+![self_sort_map](/assets/self_sort_maps.png)
 
+This is just a simple interface, where you can map the angles and building block connectivities of interest and the data will be collated for you.
 
+Currently this covers ditopic + tritopic, ditopic + tetratopic and tritopic + tetratopic cage topologies.
+
+**Go to Notion link**: [self-sort dataset v0.0.1](https://tarziaresearch.notion.site/actual-app-5a5b2f3c5a564fdeaf59c0752bf1ca6f)
+
+## Topology request form:
 
 I will continue to update the self-sort maps and the models that are part of them as we progress this work. For now, if you are interested in any particular topologies, you can send this request here:
 
