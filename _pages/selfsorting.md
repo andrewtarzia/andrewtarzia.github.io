@@ -11,6 +11,20 @@ These were introduced based on our coarse-grained model here: DOI
 
 This is just a simple interface, where you input the angles and building blocks of interest and the data will be collated for you.
 
+# web-app
+
+Status: In progress
+
+- [ ]  meet LT
+    - [ ]  discuss on my own github pages?
+        - [ ]  [https://github.com/opatiny/react-mol-structures/tree/master](https://github.com/opatiny/react-mol-structures/tree/master)
+        - [ ]  https://github.com/gitname/react-gh-pages
+        - [ ]  https://github.com/elilambnz/react-py
+- [ ]  want topology requests
+- [ ]  write it into github pages
+    - [ ]  mention it will constantly be updated as improved models come out
+    - [ ]  mention that if you put in angles that are not in the data, I will get a notification and then update the data
+
 
 
 I will continue to update the self-sort maps and the models that are part of them as we progress this work. For now, if you are interested in any particular topologies, you can send this request here:
