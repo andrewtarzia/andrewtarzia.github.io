@@ -17,7 +17,7 @@ This is just a simple interface, where you can map the angles and building block
 
 Currently this covers ditopic + tritopic, ditopic + tetratopic and tritopic + tetratopic cage topologies.
 
-**Go to Notion link**: [self-sort dataset v0.0.1](https://tarziaresearch.notion.site/actual-app-5a5b2f3c5a564fdeaf59c0752bf1ca6f)
+**Go to Notion link**: [self-sort dataset v0.0.2](https://tarziaresearch.notion.site/actual-app-5a5b2f3c5a564fdeaf59c0752bf1ca6f)
 
 **Go to GitHub repository with structure and self-sort images**: [CGModel repositories](https://github.com/andrewtarzia/cgmodels/tree/main/cg_model_apr2023)
 
