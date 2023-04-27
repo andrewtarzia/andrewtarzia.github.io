@@ -21,11 +21,15 @@ Currently this covers ditopic + tritopic, ditopic + tetratopic and tritopic + te
 
 **Go to GitHub repository with structure and self-sort images**: [CGModel repositories](https://github.com/andrewtarzia/cgmodels/tree/main/cg_model_apr2023)
 
-## Topology request form:
+
+## Future plans for a web-app:
+
+This setup was organised relatively quickly. However, the computational models used in this research are so cheap that on-the-fly calculations are possible in a web-backend. This would allow for a user to supply their own inputs and have the models run immediately.
+
+## Topology and angle request form:
 
 I will continue to update the self-sort maps and the models that are part of them as we progress this work. For now, if you are interested in any particular topologies, you can send this request here:
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScGwoHxJiWpf1S2V4pXwutdJ8WXXS_M28QOUMkNDmei5OmCpQ/viewform?embedded=true" width="640" height="1219" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScGwoHxJiWpf1S2V4pXwutdJ8WXXS_M28QOUMkNDmei5OmCpQ/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 
