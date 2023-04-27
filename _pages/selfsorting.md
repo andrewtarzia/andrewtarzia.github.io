@@ -19,6 +19,8 @@ Currently this covers ditopic + tritopic, ditopic + tetratopic and tritopic + te
 
 **Go to Notion link**: [self-sort dataset v0.0.1](https://tarziaresearch.notion.site/actual-app-5a5b2f3c5a564fdeaf59c0752bf1ca6f)
 
+**Go to GitHub repository with structure and self-sort images**: [CGModel repositories](https://github.com/andrewtarzia/cgmodels/tree/main/cg_model_apr2023)
+
 ## Topology request form:
 
 I will continue to update the self-sort maps and the models that are part of them as we progress this work. For now, if you are interested in any particular topologies, you can send this request here:
