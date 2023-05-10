@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am now a research fellow (RTD-a) in the [Pavan Lab](https://www.gmpavanlab.com/) at Politecnico di Torino working on the rational design of (supra)molecular materials.
+I am now a research fellow (RTD-a; funded by the National Recovery and Resilience Plan (PNRR)) in the [Pavan Lab](https://www.gmpavanlab.com/) at Politecnico di Torino working on the rational design of (supra)molecular materials.
 
 I worked as a postdoc in the [Jelfs Materials Group](https://jelfs-group.org) at Imperial College London on the development of software and methods for the efficient screening of coordination cages and other (supra)molecular materials. 
 
