@@ -1,15 +1,15 @@
 ---
 layout: archive
-title: "self sorting outcomes and configuration maps in cage-like molecules"
+title: "self-sorting outcomes and topology maps in cage-like molecules"
 permalink: /selfsort/
 author_profile: true
 ---
 
-## Using accessible configuration maps
+## Using accessible topology maps
 
 These were introduced based on our coarse-grained model here: DOI
 
-Based on building block properties, we have defined accessible configuration maps, which give an idea of what cage topology you are likely to get:
+Based on building block properties, we have defined accessible topology maps, which give an idea of what cage topology you are likely to get after self-assembly:
 
 ![self_sort_map](/assets/self_sort_maps.png)
 
@@ -17,7 +17,7 @@ This is a simple interface, where you can map the angles and building block conn
 
 This covers ditopic + tritopic, ditopic + tetratopic and tritopic + tetratopic cage topologies.
 
-**Go to Notion link**: [configuration dataset v0.0.3](https://tarziaresearch.notion.site/actual-app-5a5b2f3c5a564fdeaf59c0752bf1ca6f)
+**Go to Notion link**: [topology selection dataset v0.0.4](https://tarziaresearch.notion.site/actual-app-5a5b2f3c5a564fdeaf59c0752bf1ca6f)
 
 **Go to GitHub repository with structure and self-sort images**: [CGModel repositories](https://github.com/andrewtarzia/cgmodels/tree/main/cg_model_jul2023)
 
