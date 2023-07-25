@@ -12,5 +12,5 @@ main:
   - title: "Blog Posts"
     url: /year-archive/
 
-#  - title: "Self sort maps"
-#    url: /selfsort/
+  - title: "Self sort maps"
+    url: /selfsort/
