@@ -7,13 +7,13 @@ author_profile: true
 
 ## Using accessible topology maps
 
-These were introduced based on our coarse-grained model here: DOI
+These were introduced based on our coarse-grained model here: [Systematic exploration of accessible topologies of cage molecules via minimalistic models, Chemical Science, 2023, 10.1039/D3SC03991A](https://doi.org/10.1039/D3SC03991A)
 
 Based on building block properties, we have defined accessible topology maps, which give an idea of what cage topology you are likely to get after self-assembly:
 
 ![self_sort_map](/assets/self_sort_maps.png)
 
-This is a simple interface, where you can map the angles and building block connectivities of interest to stable topologies.
+This is a simple interface where you can map the angles and building block connectivities of interest to stable topologies.
 
 This covers ditopic + tritopic, ditopic + tetratopic and tritopic + tetratopic cage topologies.
 
