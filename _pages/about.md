@@ -9,6 +9,7 @@ redirect_from:
 ---
 
 I am now a research fellow (RTD-a; funded by the National Recovery and Resilience Plan (PNRR)) in the [Pavan Lab](https://www.gmpavanlab.com/) at Politecnico di Torino working on the rational design of (supra)molecular materials.
+You can find information about my publications on [Kudos](https://www.growkudos.com/profile/andrew_tarzia).
 
 I worked as a postdoc in the [Jelfs Materials Group](https://jelfs-group.org) at Imperial College London on the development of software and methods for the efficient screening of coordination cages and other (supra)molecular materials. 
 
