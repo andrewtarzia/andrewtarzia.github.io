@@ -9,6 +9,8 @@ author_profile: true
 
 I am a developer of [<i>stk</i>](https://github.com/lukasturcani/stk) for the generation of molecular and periodic material structures. I recently put together a play list of tutorials on <i>stk</i> usage: [<i>stk</i> tutorials](https://www.youtube.com/watch?v=mPr9D7nCQ84&list=PLIWYdPQ9hLzVngMF8NOkiApMtgc_ZwZgO) and have some examples of <i>stk</i> usage [here](https://github.com/andrewtarzia/stk-examples).
 
+I have some code available on [GitHub Gists](https://gist.github.com/andrewtarzia).
+
 [<i>stko</i>](https://github.com/JelfsMaterialsGroup/stko) contains wrappers for optimisation and property calcualtion of <i>stk</i> molecules
 
 I have also developed some low-cost Monte Carlo-based algorithms for optimisation <i>stk</i> molecule optimisation ([MCHammer](https://github.com/andrewtarzia/MCHammer)) and host-guest conformer generation/optimisation ([SpinDry](https://github.com/andrewtarzia/SpinDry)).
