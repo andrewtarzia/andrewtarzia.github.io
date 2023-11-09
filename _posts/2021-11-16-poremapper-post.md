@@ -9,6 +9,11 @@ author_profile: true
 A quick and easy way to make blobs and pores
 ------
 
+An update!
+----------
+
+A new version of PoreMapper is available on `pip` with some minor changes to the API. See the latest [gists](https://gist.github.com/andrewtarzia) or the PoreMapper [examples](https://github.com/andrewtarzia/PoreMapper/tree/main/examples) for usage.
+
 Why?
 ------
 
@@ -45,7 +50,7 @@ host = pm.Host.init_from_xyz_file(path=f'{name}.xyz')
 host = host.with_centroid([0., 0., 0.])
 
 # Define calculator object.
-calculator = pm.Inflater(bead_sigma=1.0)
+calculator = pm.Inflater(bead_sigma=1.0, centroid=host.get_centroid())
 
 # Run calculator on host object, analysing output.
 final_result = calculator.get_inflated_blob(host=host)
@@ -58,6 +63,37 @@ print(f'windows: {windows}, pore_volume: {pore.get_volume()}')
 host.write_xyz_file(f'{name}_final.xyz')
 final_result.pore.get_blob().write_xyz_file(f'{name}_blob_final.xyz')
 final_result.pore.write_xyz_file(f'{name}_pore_final.xyz')
+
+```
+
+And from an `stk.Molecule`:
+
+```python
+import pore_mapper as pm
+import stk
+
+# Define some stk molecule.
+cage = stk.ConstructedMolecule(...)
+# OR
+cage = stk.BuildingBlock(...)
+
+# Convert to Host.
+host = pm.Host(
+    atoms=(
+        pm.Atom(id=i.get_id(), element_string=i.__class__.__name__)
+        for i in cage.get_atoms()
+    ),
+    position_matrix=cage.get_position_matrix(),
+)
+
+# Define calculator object.
+calculator = pm.Inflater(bead_sigma=1.0, centroid=host.get_centroid())
+
+# Run calculator on host object, analysing output.
+final_result = calculator.get_inflated_blob(host=host)
+
+# Analysis.
+...
 
 ```
 
