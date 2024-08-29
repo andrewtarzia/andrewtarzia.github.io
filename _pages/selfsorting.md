@@ -7,7 +7,7 @@ author_profile: true
 
 ## Using accessible topology maps
 
-An updated version of this can be found [here]([cgmodels.readthedocs.io](https://cgmodels.readthedocs.io/en/latest/)).
+An updated version of this can be found [here](https://cgmodels.readthedocs.io/en/latest/).
 
 These were introduced based on our coarse-grained model here: [Systematic exploration of accessible topologies of cage molecules via minimalistic models, Chemical Science, 2023, 10.1039/D3SC03991A](https://doi.org/10.1039/D3SC03991A)
 
