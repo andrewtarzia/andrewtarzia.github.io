@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-This website will hold some blog posts with code snippets and recipes. More is findable on my YouTube and in my [GitHub Gists](https://gist.github.com/andrewtarzia).
+This website will hold some blog posts with code snippets and recipes. Find more on my YouTube and in my [GitHub Gists](https://gist.github.com/andrewtarzia).
 {: .notice}
 
 I am now an Assistant Professor at the University of Birmingham and leader of the [Tarzia Research Group](https://TarziaResearchGroup.github.io), working to integrate computational tools for molecular materials design with experimental activities.
